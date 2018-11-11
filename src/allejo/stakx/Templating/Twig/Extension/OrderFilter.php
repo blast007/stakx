@@ -18,7 +18,7 @@ class OrderFilter extends AbstractTwigExtension implements TwigFilterInterface
             return $array;
         }
 
-        usort($array, function ($a, $b) use ($key, $order) {
+        uasort($array, function ($a, $b) use ($key, $order) {
             $aValue = __::get($a, $key);
             $bValue = __::get($b, $key);
 

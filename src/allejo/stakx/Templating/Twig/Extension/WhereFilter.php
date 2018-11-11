@@ -45,11 +45,11 @@ class WhereFilter extends AbstractTwigExtension implements TwigFilterInterface
     {
         $results = [];
 
-        foreach ($array as $item)
+        foreach ($array as $itemKey => $item)
         {
             if ($this->compare($item, $key, $comparison, $value))
             {
-                $results[] = $item;
+                $results[$itemKey] = $item;
             }
         }
 
